@@ -3,6 +3,9 @@ import { Smartphone, Cloud, Bell, BarChart3, Users, Check, Download } from 'luci
 import researchDashboard from '/images/research-dashboard.png';
 import beehivesField from '/images/beehives-field.png';
 import smartNyukiDevice from '/images/smart-nyuki-device.png';
+import johnImage from '/images/testimonials/john.png';
+import sarahImage from '/images/testimonials/sarah.png';
+import graceImage from '/images/testimonials/grace.png';
 
 const AppPage: React.FC = () => {
   const features = [
@@ -375,8 +378,8 @@ const AppPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <div className="bg-gray-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-600 mb-3 sm:mb-4">
                 Free Forever
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
@@ -384,8 +387,8 @@ const AppPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-green-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <div className="bg-gray-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-600 mb-3 sm:mb-4">
                 Works Offline
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
@@ -393,8 +396,8 @@ const AppPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <div className="bg-gray-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-600 mb-3 sm:mb-4">
                 Cross-Platform
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
@@ -402,8 +405,8 @@ const AppPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <div className="bg-gray-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-600 mb-3 sm:mb-4">
                 Regular Updates
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
@@ -436,7 +439,7 @@ const AppPage: React.FC = () => {
                 "This app has completely transformed how I manage my 30+ hives. The inspection tracking is brilliant!"
               </p>
               <div className="flex items-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-300 rounded-full mr-4"></div>
+                <img src={johnImage} alt="John Kamau" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-4 object-cover" />
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm sm:text-base">John Kamau</h4>
                   <p className="text-xs sm:text-sm text-gray-500">Commercial Beekeeper, Nakuru</p>
@@ -456,7 +459,7 @@ const AppPage: React.FC = () => {
                 "Perfect for research! The data export feature makes it easy to analyze trends and share findings with colleagues."
               </p>
               <div className="flex items-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-300 rounded-full mr-4"></div>
+                <img src={sarahImage} alt="Dr. Sarah Wanjiru" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-4 object-cover" />
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Dr. Sarah Wanjiru</h4>
                   <p className="text-xs sm:text-sm text-gray-500">Researcher, University of Nairobi</p>
@@ -476,7 +479,7 @@ const AppPage: React.FC = () => {
                 "As a beginner, this app helped me learn and track everything. The collaborative features are amazing for our cooperative!"
               </p>
               <div className="flex items-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-300 rounded-full mr-4"></div>
+                <img src={graceImage} alt="Grace Achieng" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-4 object-cover" />
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Grace Achieng</h4>
                   <p className="text-xs sm:text-sm text-gray-500">Hobby Beekeeper, Kisumu</p>
