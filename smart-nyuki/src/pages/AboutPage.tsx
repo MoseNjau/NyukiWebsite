@@ -1,26 +1,28 @@
 import React from 'react';
-import { Target, Users, Leaf, Award, Heart, Shield, UserCircle } from 'lucide-react';
+import beehivesField from '/images/beehives-field.png';
+import beekeeperSmoke from '/images/beekeeper-smoke.png';
+import { Users, Award, Heart, Github, Linkedin, Twitter, Lightbulb, Sprout, Target, Eye } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const visionCards = [
     {
-      icon: Target,
+      icon: Lightbulb,
       title: 'Modernizing African Beekeeping',
-      description: 'Bring cutting-edge technology to every beekeeper, enabling them to scale their operations and improve productivity.',
+      description: 'Equipping farmers with cutting-edge IoT technology and data analytics to improve hive health, increase yields, and make informed decisions based on real-time insights.',
       color: 'bg-yellow-50',
       iconColor: 'text-yellow-600'
     },
     {
       icon: Users,
       title: 'Empowering Farmers with Data',
-      description: 'Building a smarter community of beekeepers who use data to make informed decisions and boost productivity.',
+      description: 'Building a connected community of beekeepers who can share knowledge, collaborate on best practices, and access expert support through our digital platform.',
       color: 'bg-green-50',
       iconColor: 'text-green-600'
     },
     {
-      icon: Leaf,
+      icon: Sprout,
       title: 'Supporting Sustainable Agriculture',
-      description: 'Promoting eco-friendly practices through solar-powered solutions that protect the environment.',
+      description: 'Promoting healthier bee colonies to support ecosystems, ensure long-term sustainability, and contribute to environmental conservation across the continent.',
       color: 'bg-blue-50',
       iconColor: 'text-blue-600'
     }
@@ -28,69 +30,104 @@ const AboutPage: React.FC = () => {
 
   const teamMembers = [
     {
-      name: 'Dr. Lawrence Maina',
-      role: 'CEO & Founder',
-      description: 'Over 15 years in AgriTech innovation. Inventor of M',
-      icon: '👤'
+      name: 'Dr. Lawrence Nderu',
+      role: 'Principal Investigator',
+      description: 'Researcher in AI/ML',
+      image: '/images/team/lawrence.png',
+      socials: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#',
+      },
     },
     {
-      name: 'Moses Tioti',
-      role: 'CTO',
-      description: 'IoT specialist with expertise in hardware and software',
-      icon: '👤'
+      name: 'Moses Njau',
+      role: 'Software Engineer / Team Lead',
+      description: '',
+      image: '/images/team/moses.png',
+      socials: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#',
+      },
     },
     {
-      name: 'Dolphin Mwendai',
-      role: 'COO',
-      description: 'Operations and supply chain specialist with 15 years\' experience',
-      icon: '👤'
+      name: 'James Karanja',
+      role: 'IoT Engineer',
+      description: '',
+      image: '/images/team/james.png',
+      socials: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#',
+      },
     },
     {
-      name: 'John Kariara',
-      role: 'CFO',
-      description: 'Ex-M at Kenyan tech company and fundraising specialist',
-      icon: '👤'
+      name: 'Charles Mwangi',
+      role: 'AI Engineer & Lead Researcher',
+      description: '',
+      image: '/images/team/charles.png',
+      socials: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#',
+      },
     },
     {
-      name: 'Ronnie Oganga',
-      role: 'Software Engineer',
-      description: 'Top-tier developer of software, integrations and UX designs',
-      icon: '👤'
+      name: 'Kerren Hapuch',
+      role: 'Data Scientist, Data Analytics',
+      description: '',
+      image: '/images/team/kerren.png',
+      socials: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#',
+      },
     },
     {
-      name: 'Bartholomew Munyanya',
-      role: 'Electronics Engineer',
-      description: 'Leading the engineering of devices and IoT Solutions',
-      icon: '👤'
+      name: 'Methusselah Nyongesa',
+      role: 'Software Engineer, ML Engineer',
+      description: '',
+      image: '/images/team/methusselah.png',
+      socials: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#',
+      },
     },
     {
-      name: 'Brian Bisor',
-      role: 'Sales',
-      description: 'Sales lead for hubs distributing across East Africa',
-      icon: '👤'
-    }
+      name: 'Brian Rop',
+      role: 'Technical Writer and IoT Engineer',
+      description: '',
+      image: '/images/team/brian.png',
+      socials: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#',
+      },
+    },
   ];
 
   const values = [
     {
-      icon: Target,
-      title: 'Mission-Driven',
-      description: 'We are committed to making an actual difference in Africa through the lives we impact, and the many more lives that benefit from sustainable practices.'
-    },
-    {
       icon: Heart,
+      title: 'Mission-Driven',
+      description: 'We\'re committed to empowering African beekeepers through accessible, affordable technology that makes a real difference in their livelihoods.'
+    },
+    {
+      icon: Target,
       title: 'Innovation for Impact',
-      description: 'We pursue innovation that matters. Our goal is not innovation for its own sake but technology that creates measurable impact for farmers, bees, and ecosystems.'
+      description: 'We combine cutting-edge IoT technology with deep understanding of local beekeeping practices to create solutions that work in African contexts.'
     },
     {
-      icon: Shield,
+      icon: Eye,
       title: 'Transparency & Trust',
-      description: 'Data transparency is at our core. Beekeepers own their data, and we build trust with our community. We\'re upfront about costs, we honor commitments.'
+      description: 'Your data is yours. We\'re committed to open-source development, data ownership, and building trust with our beekeeping community.'
     },
     {
-      icon: Leaf,
+      icon: Award,
       title: 'Quality & Reliability',
-      description: 'From product design to customer service, quality is non-negotiable. We strive for excellence, build sturdy and reliable products, deliver exceptional support and continually improve.'
+      description: 'We build robust, field-tested technology designed for real-world conditions, backed by continuous support and improvement.'
     }
   ];
 
@@ -98,30 +135,27 @@ const AboutPage: React.FC = () => {
     {
       number: 2,
       title: 'Zero Hunger',
-      description: 'Supporting beekeepers helps boost pollination and food production, contributing to food security across Africa.',
-      color: 'bg-orange-100',
-      textColor: 'text-orange-800'
+      description: 'Supporting food security through improved beekeeping practices and increased honey production for local communities.',
+      color: 'bg-yellow-500',
     },
     {
       number: 9,
       title: 'Industry, Innovation and Infrastructure',
-      description: 'Bringing IoT solutions and digital infrastructure to rural areas, fostering innovation and economic growth.',
-      color: 'bg-orange-100',
-      textColor: 'text-orange-800'
+      description: 'Bringing IoT technology and digital infrastructure to rural agricultural communities across Africa.',
+      color: 'bg-orange-500',
     },
     {
       number: 15,
       title: 'Life on Land',
-      description: 'Promoting bee conservation protects ecosystems, biodiversity, and supports environmental sustainability.',
-      color: 'bg-green-100',
-      textColor: 'text-green-800'
+      description: 'Protecting pollinators and promoting biodiversity through sustainable beekeeping and ecosystem preservation.',
+      color: 'bg-green-500',
     }
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             About Smart Nyuki
@@ -136,13 +170,12 @@ const AboutPage: React.FC = () => {
       <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div>
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg shadow-xl aspect-[4/3] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-6xl mb-4">👥</div>
-                  <p className="text-gray-600 text-sm">Team Meeting Image</p>
-                </div>
-              </div>
+            <div className="p-4 bg-white rounded-lg shadow-md">
+              <img 
+                src={beehivesField} 
+                alt="Smart Nyuki Beehives in a field" 
+                className="rounded-lg w-full h-full object-cover aspect-[4/3]"
+              />
             </div>
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
@@ -163,7 +196,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Acknowledged by Ministry */}
-      <section className="py-12 sm:py-16 md:py-20 bg-yellow-50">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl shadow-sm p-6 sm:p-8 border-l-4 border-yellow-500">
             <div className="flex items-start gap-4">
@@ -187,7 +220,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Our Vision for a Sweeter Future */}
-      <section className="py-12 sm:py-16 md:py-20">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -200,8 +233,8 @@ const AboutPage: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {visionCards.map((card, index) => (
-              <div key={index} className={`${card.color} p-6 sm:p-8 rounded-xl text-center`}>
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+              <div key={index} className={`bg-white p-6 sm:p-8 rounded-xl text-center border transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}>
+                <div className="w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <card.icon className={card.iconColor} size={28} />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
@@ -215,7 +248,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Meet Our Team */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -228,15 +261,24 @@ const AboutPage: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-yellow-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl sm:text-4xl">
-                  {member.icon}
-                </div>
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full mx-auto mb-4 bg-gray-200 object-cover"/>
                 <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1">
                   {member.name}
                 </h3>
                 <p className="text-sm text-yellow-600 font-semibold mb-3">{member.role}</p>
-                <p className="text-xs sm:text-sm text-gray-600">{member.description}</p>
+                <p className="text-xs sm:text-sm text-gray-600 h-10">{member.description}</p>
+                <div className="flex justify-center gap-4 mt-4">
+                  <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600">
+                    <Linkedin size={20} />
+                  </a>
+                  <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600">
+                    <Twitter size={20} />
+                  </a>
+                  <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600">
+                    <Github size={20} />
+                  </a>
+                </div>
               </div>
             ))}
           </div>
@@ -244,7 +286,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Our Values */}
-      <section className="py-12 sm:py-16 md:py-20">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -254,9 +296,9 @@ const AboutPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {values.map((value, index) => (
-              <div key={index} className="bg-gray-50 p-6 sm:p-8 rounded-xl">
+              <div key={index} className="bg-gray-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm">
                     <value.icon className="text-yellow-600" size={24} />
                   </div>
                   <div>
@@ -273,18 +315,17 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Why Beekeeping Matters */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-green-50 to-blue-50">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg shadow-xl aspect-[4/3] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-6xl mb-4">🐝</div>
-                  <p className="text-gray-600 text-sm">Beekeeper with Smoke</p>
-                </div>
-              </div>
-            </div>
             <div className="order-1 md:order-2">
+              <img 
+                src={beekeeperSmoke} 
+                alt="Beekeeper with smoke" 
+                className="rounded-lg shadow-xl w-full h-full object-cover aspect-[4/3]"
+              />
+            </div>
+            <div className="order-2 md:order-1">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Why Beekeeping Matters
               </h2>
@@ -303,7 +344,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Supporting UN SDG Goals */}
-      <section className="py-12 sm:py-16 md:py-20">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -316,14 +357,14 @@ const AboutPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {sdgGoals.map((goal, index) => (
-              <div key={index} className={`${goal.color} p-6 sm:p-8 rounded-xl text-center border-2 ${goal.color.replace('100', '200')}`}>
-                <div className={`w-16 h-16 sm:w-20 sm:h-20 ${goal.color.replace('100', '500')} rounded-lg mx-auto mb-4 flex items-center justify-center text-white font-bold text-2xl sm:text-3xl`}>
+              <div key={index} className={`bg-white p-6 sm:p-8 rounded-xl text-left shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}>
+                <div className={`w-16 h-16 ${goal.color} rounded-lg mb-4 flex items-center justify-center text-white font-bold text-4xl`}>
                   {goal.number}
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
                   {goal.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-600">{goal.description}</p>
+                <p className="text-sm text-gray-600">{goal.description}</p>
               </div>
             ))}
           </div>
@@ -331,21 +372,23 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Join Our Journey CTA */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Join Our Journey
-          </h2>
-          <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 px-4">
-            Whether you're a beekeeper, a technology partner, or simply passionate about sustainable agriculture. Join us as we work to revolutionize beekeeping across Africa and support beekeepers towards a sweeter future.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-yellow-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-yellow-600 transition-colors text-sm sm:text-base">
-              Become a Partner
-            </button>
-            <button className="border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:border-gray-400 transition-colors text-sm sm:text-base">
-              Contact Us
-            </button>
+          <div className="bg-white p-8 rounded-lg shadow-md">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              Join Our Journey
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 px-4">
+              Whether you're a beekeeper, a technology partner, or simply passionate about sustainable agriculture. Join us as we work to revolutionize beekeeping across Africa and support beekeepers towards a sweeter future.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-yellow-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-yellow-600 transition-colors text-sm sm:text-base">
+                Become a Partner
+              </button>
+              <button className="border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:border-gray-400 transition-colors text-sm sm:text-base">
+                Contact Us
+              </button>
+            </div>
           </div>
         </div>
       </section>

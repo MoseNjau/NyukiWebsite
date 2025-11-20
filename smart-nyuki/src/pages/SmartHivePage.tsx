@@ -1,5 +1,10 @@
 import React from 'react';
-import { Thermometer, Droplets, Weight, Volume2, Zap, Wifi, Sun, Shield, Check } from 'lucide-react';
+import smartNyukiDevice from '/images/smart-nyuki-device.png';
+import modernApiaryLandscape from '/images/Modern_apiary_landscape_9146c10e.png';
+import dataTransmission from '/images/data-transmission.png';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { Thermometer, Droplets, Volume2, Zap, Wifi, Shield, Check } from 'lucide-react';
 
 const SmartBasePage: React.FC = () => {
   const keyFeatures = [
@@ -151,11 +156,13 @@ const SmartBasePage: React.FC = () => {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <img 
-                src="/images/smart-nyuki-base-product.jpg" 
-                alt="Smart Nyuki Base Device" 
-                className="rounded-lg shadow-2xl w-full"
-              />
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <img 
+                  src={smartNyukiDevice} 
+                  alt="Smart Nyuki Base Device" 
+                  className="rounded-lg w-full object-contain"
+                />
+              </div>
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Key Features</h2>
@@ -241,11 +248,13 @@ const SmartBasePage: React.FC = () => {
               </ul>
             </div>
             <div>
-              <img 
-                src="/images/beehives-field.jpg" 
-                alt="Multiple beehives in the field" 
-                className="rounded-lg shadow-xl w-full"
-              />
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <img 
+                  src={modernApiaryLandscape} 
+                  alt="Multiple beehives in the field" 
+                  className="rounded-lg w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -291,11 +300,13 @@ const SmartBasePage: React.FC = () => {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <img 
-                src="/images/data-transmission.jpg" 
-                alt="Wireless connectivity" 
-                className="rounded-lg shadow-xl w-full"
-              />
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <img 
+                  src={dataTransmission} 
+                  alt="Wireless connectivity" 
+                  className="rounded-lg w-full"
+                />
+              </div>
             </div>
             <div className="order-1 md:order-2">
               <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-100 rounded-lg mb-6">
@@ -361,9 +372,9 @@ const SmartBasePage: React.FC = () => {
             <p className="text-gray-600 mb-4">
               We offer free consultation to ensure compatibility with your setup.
             </p>
-            <button className="bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
+            <Link to="/contact" className="inline-block bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
               Contact Support
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -371,63 +382,19 @@ const SmartBasePage: React.FC = () => {
       {/* Pricing & Purchase CTA */}
       <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="p-12 text-center">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                  Get Your Smart Nyuki Base Today
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Join hundreds of beekeepers who have transformed their operations with smart technology.
-                </p>
-                
-                <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-xl mb-8">
-                  <div className="text-5xl font-bold text-gray-900 mb-2">
-                    KSh 24,999
-                  </div>
-                  <p className="text-gray-600 mb-4">One-time purchase • Lifetime updates</p>
-                  <div className="space-y-2 text-left max-w-md mx-auto">
-                    <div className="flex items-center gap-2">
-                      <Check className="text-green-600" size={20} />
-                      <span className="text-gray-700">Smart Nyuki Base device</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="text-green-600" size={20} />
-                      <span className="text-gray-700">Solar panel & mounting kit</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="text-green-600" size={20} />
-                      <span className="text-gray-700">Free Smart Nyuki app access</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="text-green-600" size={20} />
-                      <span className="text-gray-700">2-year warranty</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="text-green-600" size={20} />
-                      <span className="text-gray-700">Free installation support</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="text-green-600" size={20} />
-                      <span className="text-gray-700">1 year free data connectivity</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-yellow-500 text-white px-10 py-4 rounded-lg font-semibold hover:bg-yellow-600 transition-colors text-lg">
-                    Order Now
-                  </button>
-                  <button className="border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-lg font-semibold hover:border-gray-400 transition-colors text-lg">
-                    Request Demo
-                  </button>
-                </div>
-
-                <p className="text-sm text-gray-500 mt-6">
-                  Volume discounts available for 10+ units • Financing options available
-                </p>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Transform your beekeeping operation with the Smart Nyuki Base. View our transparent pricing and choose the plan that's right for you.
+            </p>
+            <HashLink 
+              to="/solutions#pricing"
+              className="inline-block bg-yellow-500 text-white px-10 py-4 rounded-lg font-semibold hover:bg-yellow-600 transition-colors text-lg"
+            >
+              View Pricing & Plans
+            </HashLink>
           </div>
         </div>
       </section>
