@@ -171,8 +171,8 @@ const ContactPage: React.FC = () => {
               </div>
               <p className="text-gray-600 mb-6">
                 For general questions about Smart Nyuki, our products, or services, please email us at{' '}
-                <a href="mailto:info@smartnyuki.com" className="text-yellow-600 underline">
-                  info@smartnyuki.com
+                <a href="mailto:info@smartnyuki.jkhubafrica.com" className="text-yellow-600 underline">
+                  info@smartnyuki.jkhubafrica.com
                 </a>
                 . We typically respond within 24 hours during business days.
               </p>
