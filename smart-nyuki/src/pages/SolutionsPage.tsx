@@ -59,6 +59,37 @@ const AppPage: React.FC = () => {
     }
   ];
 
+  const userTypes = [
+    {
+      icon: Users,
+      title: 'Commercial Beekeepers',
+      description: 'Manage large-scale operations efficiently',
+      iconBg: 'bg-yellow-100',
+      iconColor: 'text-yellow-600'
+    },
+    {
+      icon: Users,
+      title: 'Hobby Beekeepers',
+      description: 'Track your backyard hives with ease',
+      iconBg: 'bg-yellow-100',
+      iconColor: 'text-yellow-600'
+    },
+    {
+      icon: BarChart3,
+      title: 'Researchers',
+      description: 'Collect and analyze field data',
+      iconBg: 'bg-yellow-100',
+      iconColor: 'text-yellow-600'
+    },
+    {
+      icon: Users,
+      title: 'Cooperatives',
+      description: 'Coordinate member activities',
+      iconBg: 'bg-yellow-100',
+      iconColor: 'text-yellow-600'
+    }
+  ];
+
   const appCapabilities = [
     'Create and manage multiple apiaries',
     'Track hive details (name, health, treatment)',
@@ -305,53 +336,19 @@ const AppPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
-            <div className="bg-gray-50 p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Users className="text-yellow-600" size={28} />
+            {userTypes.map((userType, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 ${userType.iconBg} rounded-full mx-auto mb-4 flex items-center justify-center`}>
+                  <userType.icon className={userType.iconColor} size={28} />
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">
+                  {userType.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600">
+                  {userType.description}
+                </p>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">
-                Commercial Beekeepers
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-600">
-                Manage large-scale operations efficiently
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Users className="text-green-600" size={28} />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">
-                Hobby Beekeepers
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-600">
-                Track your backyard hives with ease
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <BarChart3 className="text-blue-600" size={28} />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">
-                Researchers
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-600">
-                Collect and analyze field data
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Users className="text-purple-600" size={28} />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">
-                Cooperatives
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-600">
-                Coordinate member activities
-              </p>
-            </div>
+            ))}
           </div>
 
           <div className="text-center mt-8 sm:mt-12 bg-gray-50 p-6 sm:p-8 rounded-xl shadow-sm max-w-3xl mx-auto">
@@ -380,10 +377,10 @@ const AppPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="bg-gray-50 p-6 sm:p-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <h3 className="text-xl sm:text-2xl font-bold text-yellow-600 mb-3 sm:mb-4">
-                Free Forever
+                Scalable for Growth
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
-                The Smart Nyuki app is completely free to use. No hidden fees, no subscriptions. We believe every beekeeper deserves access to modern tools.
+                Start with a few hives and seamlessly scale to hundreds. Our platform grows with you, offering plans for every stage of your beekeeping journey.
               </p>
             </div>
 

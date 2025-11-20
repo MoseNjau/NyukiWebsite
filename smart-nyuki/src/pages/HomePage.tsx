@@ -1,6 +1,7 @@
 import React from 'react';
+import AnimatedBees from '../components/AnimatedBees';
 import { Link } from 'react-router-dom';
-import { Activity, Bell, TrendingUp, Users, Target, Leaf, BarChart3, MapPin, Briefcase, Clock, TrendingDown, Database, Check, Lightbulb, Sprout, AlertCircle } from 'lucide-react';
+import { Activity, Bell, TrendingUp, Users, Leaf, BarChart3, MapPin, Briefcase, Clock, TrendingDown, Database, Check, Lightbulb, Sprout, AlertCircle } from 'lucide-react';
 import beekeeperHero from '/images/beekeeper-hero.png';
 import smartNyukiDevice from '/images/smart-nyuki-device.png';
 import researchDashboard from '/images/research-dashboard.png';
@@ -14,6 +15,7 @@ const HomePage: React.FC = () => {
         style={{ backgroundImage: `url(${beekeeperHero})` }}
       >
         <div className="absolute inset-0 bg-white bg-opacity-80"></div>
+        <AnimatedBees />
         <div className="container-custom relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -27,9 +29,9 @@ const HomePage: React.FC = () => {
                 <button className="bg-yellow-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
                   Access Web App
                 </button>
-                <button className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors">
-                  Join Pilot Program
-                </button>
+                <Link to="/solutions" className="border-2 border-yellow-500 text-yellow-500 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-white transition-colors">
+                  Discover Solutions
+                </Link>
               </div>
               <div className="flex gap-6 text-sm">
                 <div className="flex items-center gap-2">
